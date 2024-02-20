@@ -2,7 +2,7 @@ const process = require('process');
 const path = require('path');
 let defaultOptions = {
 	clearScreenShots: true,
-	specFolder: './test/specs/e2e',
+	specFolder: './test/specs',
 	shotFolder: './test/shots',
 	timeOut: 7000,
 	visualCompare: true,
