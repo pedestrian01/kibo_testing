@@ -1,0 +1,107 @@
+{            
+    "defaultEnvironment": "sbx",
+    "global": {
+        "browserOptions": {
+            "type": "chrome",
+            "size": {
+                "width": 1600,
+                "height": 1000
+            }
+        },
+        "chromeOptions": [  
+            "incognito"
+        ],
+        "firefoxOptions": [
+        ]
+    },
+    "environments": {
+        "sbx": {
+            "url": "[Homepage URL]",                   
+            "productSpec": {
+                "productCode": "[Product Code to use for product and checkout specs]"
+            },
+            "checkoutSpec": {
+                "shippingAddress": {
+                    "fName": "John",
+                    "lName": "Doe",
+                    "address1": "123 Main St",
+                    "address2": "Appt: 250",
+                    "country": "US",
+                    "city": "Testville",
+                    "state": "AL",
+                    "phone": "555 555-5555",
+                    "zip": "12345",
+                    "type": "Residential"
+                },
+                "shippingMethod": {
+                    "shippingMethodId": "[Shipping Method id/code"
+                },
+                "paymentMethod": {                    
+                    "check": {
+                        "expectSuccess": true,
+                        "name": "Testing",
+                        "checkNumber": "123",
+                        "routingNumber": "657"
+                    },                            
+                    "creditCard": {
+                        "expectSuccess": true,
+                        "type": "VISA",
+                        "number": "4111111111111111",
+                        "name": "Testing",
+                        "expirationMonth": "03",
+                        "expirationYear": "2028",
+                        "securityCode": "123"
+                    },
+                    "ingenico": {
+                         "expectSuccess": true,
+                         "type": "VISA",
+                         "cardNumber": "4111111111111111",
+                         "expirationDate": "05/28",
+                         "securityCode": "123",
+                         "name": "John Doe"
+                    },
+                    "billingAddress": {
+                        "fName": "Steven",
+                        "lName": "Smith",
+                        "address1": "987 Test Rd",
+                        "address2": "Suite: 800",
+                        "country": "US",
+                        "city": "Testington",
+                        "state": "NY",
+                        "phone": "999-555-1234",
+                        "zip": "65845",
+                        "type": "Residential"
+                    },
+                    "emailAddress": "testTester@testington.com"
+                }
+            },
+            "loginSpec": {
+                "emailAddress": "[User Email. You should NOT use your regular account]",
+                "password": "[Password for user]"
+            },
+            "categorySpec": {
+                "pathName": "[Path to category page]",
+                "productCode": "[Product code to expect on category page]"
+            },
+            "searchSpec": {
+                "query": "[Search Query]",
+                "productCode": "[Product code to expect in search results]"
+            },
+            "cookies": [
+                {
+                    "name": "selectedCountry",
+                    "value": "%7B%22countryCode%22%3A%22us%22%2C%22name%22%3A%22United%20States%22%2C%22site%22%3A%22usa%22%7D",
+                    "domain": ".mozu.com"
+                },
+                {
+                    "name": "OptanonAlertBoxClosed",
+                    "value": "2024-01-19T18:34:12.128Z",
+                    "domain": ".mozu.com"
+                }
+
+            ]
+        }
+    }
+    
+
+}
