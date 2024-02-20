@@ -59,9 +59,9 @@ const firefox = require('selenium-webdriver/firefox');
     grunt.loadNpmTasks('grunt-mocha-test');   
 
     grunt.registerTask('testing:scaffold', 'Create directory scaffold for tests', function() {
-        fs.mkdirpSync('./test/shots');
-        fs.mkdirpSync('./test/baseline');
-        fs.mkdirpSync('./test/specs/e2e');
+        fs.mkdirSync('./test/shots');
+        fs.mkdirSync('./test/baseline');
+        fs.mkdirSync('./test/specs/e2e');
         grunt.task.run(['testing:examples:config', 'testing:examples']);
     });
     
